@@ -1,0 +1,71 @@
+$list: $tertiary-color-1, $secondary-color, $tertiary-color;
+
+.main {
+    @include gradient(to top, $list);
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 30px;
+
+}
+
+.task-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem;
+    flex-wrap: wrap;
+
+
+}
+
+.card-wrapper {
+    padding: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    color: black;
+    padding: 3rem;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+    max-width: 300px;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+
+    &>* {
+        margin: 1rem;
+    }
+
+    p {
+        margin: 0.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+.add-button {
+    cursor: pointer;
+    color: white;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}

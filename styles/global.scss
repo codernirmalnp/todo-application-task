@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+
+
+}
+
+:root {
+    --container_width: 100%;
+    --container_padding: 15px;
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        --container_width: 760px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        --container_width: 1000px;
+    }
+
+    @media (min-width: 1200px) {
+        --container_width: 1190px;
+    }
+
+    @media (min-width: 1400px) {
+        --container_width: 1190px;
+    }
+
+    --container_left_space: calc((100% - var(--container_width)) / 2);
+}
+
+@mixin gradient($direction, $list) {
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);
+}
+
+.container {
+    width: var(--container_width);
+    height: 100%;
+    padding: var(--container_padding);
+    margin: auto;
+}
