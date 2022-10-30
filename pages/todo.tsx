@@ -52,7 +52,7 @@ const Todo = () => {
         <div className='main'>
             <div className='card-wrapper'>
                 {result && result.map((value, i) => {
-                    return <TaskCard result={result} value={value} i={i} />
+                    return <TaskCard key={i} result={result} value={value} i={i} />
                 })
 
                 }</div>

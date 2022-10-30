@@ -32,6 +32,7 @@ export const TaskCard = (props: any) => {
     };
     const { onSubmit, control, setValue, reset, watch } = useUpdateTaskForm({ successCb, errorCb });
     return (
+
         <div className="card" key={value.id}>
             <div>
                 <h2>{value?.task?.toUpperCase()}</h2>
